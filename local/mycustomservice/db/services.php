@@ -14,6 +14,6 @@ $services = [
     'My Custom Service' => [
         'functions' => ['local_mycustomservice_get_users'],
         'restrictedusers' => 0,
-        'enabled' => 1,
+        'enabled' => 0,
     ],
 ];
