@@ -22,21 +22,30 @@ class local_mycustomservice_external extends external_api {
         
         $users = $DB->get_records('user', null, '', 'id, username, firstname, lastname, email');
 
-        echo $users;
-
-        return array_values($users);
+        $userarray = array();
+        foreach ($users as $user) {
+            $userarray[] = array(
+                'id' => $user->id,
+                'username' => $user->username,
+                'firstname' => $user->firstname,
+                'lastname' => $user->lastname,
+                'email' => $user->email
+            );
+        }
+        
+        return $userarray;
     }
 
     public static function get_users_returns() {
         return new external_multiple_structure(
             new external_single_structure(
-                [
+                array(
                     'id' => new external_value(PARAM_INT, 'User ID'),
                     'username' => new external_value(PARAM_TEXT, 'Username'),
                     'firstname' => new external_value(PARAM_TEXT, 'First name'),
                     'lastname' => new external_value(PARAM_TEXT, 'Last name'),
                     'email' => new external_value(PARAM_TEXT, 'Email address')
-                ]
+                )
             )
         );
     }
