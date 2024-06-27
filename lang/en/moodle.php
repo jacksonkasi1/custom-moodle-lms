@@ -1238,7 +1238,7 @@ $string['loginstepsnone'] = '<p>Hi!</p>
 <p>For full access to courses you\'ll need to create yourself an account.</p>
 <p>All you need to do is make up a username and password and use it in the form on this page!</p>
 <p>If someone else has already chosen your username then you\'ll have to try again using a different username.</p>';
-$string['loginto'] = 'Log in to {$a}';
+$string['loginto'] = 'Log in to -  {$a}';
 $string['loginagain'] = 'Log in again';
 $string['logoof'] = 'Logo of {$a}';
 $string['logout'] = 'Log out';

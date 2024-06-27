@@ -24,6 +24,12 @@ $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
 
+// Add these lines to enable debugging
+$CFG->debug = (E_ALL | E_STRICT);
+$CFG->debugdisplay = 1;
+$CFG->dblogerror = 1;
+
+
 require_once(__DIR__ . '/lib/setup.php');
 
 // There is no php closing tag in this file,
